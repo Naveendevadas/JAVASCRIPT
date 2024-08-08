@@ -4,10 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript</title>
+    <link rel="stylesheet" href="javas.js">
+
+    <style>
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>JAVASCRIPT</h1>
-    <script src="javas.js"></script>
+    <button id="btn">click</button>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>website</th>
+            </tr>
+        </thead>
+        <tbody id="dataContainer"></tbody>
+    </table>
+
+    <script>
+
+    let xhr = new XMLHttpRequest();
+    console.log("xhr :",xhr);
+
+    xhr.open("get","https://jsonplaceholder.typicode.com/users")
+    let btn = document.getElementById("btn")
+    btn.addEventListener("click",function () {
+        xhr.send();
+    });
+
+    xhr.onreadystatechange = function () {
+        console.log("readyState :" , xhr.readyState);
+
+        if(xhr.readyState === 4) {
+            console.log("status ; ",xhr.status);
+
+            if(xhr.status === 200) { 
+                
+                let response = xhr.response;
+                console.log("response : ",response);
+                console.log("typeof(response) : ", typeof(response));
+
+                let datas = JSON.parse(response);
+                console.log("datas :" , datas)
+
+                let dataContainer = document.getElementById('dataContainer');
+                console.log("dataContainer :",dataContainer);
+
+                let rows = '';
+
+                for(let i = 0; i < datas.length; i++){
+                    rows = rows +`  
+                    <tr>
+                        <td>${datas[i].name}</td>
+                        <td>${datas[i].username}</td>
+                        <td>${datas[1].email}</td>
+                        <td>${datas[i].website}</td>
+                    </tr>
+                    `  
+                }
+                
+                console.log("rows : ", rows);
+                dataContainer.innerHTML = rows;
+            }
+            
+        }
+
+    }
+    </script>
     
 </body>
 </html>
