@@ -1,81 +1,81 @@
 
 
-{
-    let people = [
+// {
+//     let people = [
 
-        { name: "Alice", age: 30, city: "New york" },
-        { name: "Bob", age: 25, city: "los angels" },
-        { name: "Alice", age: 30, city: "New york" },
-        { name: "Alice", age: 30, city: "New york" },
-        { name: "Alice", age: 30, city: "New york" }
+//         { name: "Alice", age: 30, city: "New york" },
+//         { name: "Bob", age: 25, city: "los angels" },
+//         { name: "Alice", age: 30, city: "New york" },
+//         { name: "Alice", age: 30, city: "New york" },
+//         { name: "Alice", age: 30, city: "New york" }
 
-    ];
-    console.log("people :", people);
+//     ];
+//     console.log("people :", people);
 
-    console.log("\n\n\n\n\n\n\n\n\n\n\n")
+//     console.log("\n\n\n\n\n\n\n\n\n\n\n")
 
 
-    let result = people.forEach((item) => {
-        console.log("item :",item);
+//     let result = people.forEach((item) => {
+//         console.log("item :",item);
         
     
-    })
+//     })
 
-}
+// }
 
-console.log("\n\n\n")
+// console.log("\n\n\n")
 
-constructor
+// constructor
 
-{
-    // using funtion
-
-
-    function Person(name, age, city) {
-        this.name = name;
-        this.age = age;
-        this.mark = city;
-
-        this.greeting = function () {
-            console.log(`hai ${this.name}, your mar ${this.mark}`)
-        }
-    }
-    let person1 = new Person('naveeen', 20, 20);
-    console.log("person1:", person1);
-    person1.greeting();
-
-} {
-
-    // using class
+// {
+//     // using funtion
 
 
-    class Person {
+//     function Person(name, age, city) {
+//         this.name = name;
+//         this.age = age;
+//         this.mark = city;
 
-        name;
-        age;
-        mark;
+//         this.greeting = function () {
+//             console.log(`hai ${this.name}, your mar ${this.mark}`)
+//         }
+//     }
+//     let person1 = new Person('naveeen', 20, 20);
+//     console.log("person1:", person1);
+//     person1.greeting();
 
-        constructor(name, age, mark) {
-            this.name = name;
-            this.age = age;
-            this.mark = mark;
-        }
+// } {
 
-        greeting() {
-            console.log(`Hello ${this.name}, your age is ${this.age}, and your Mark is ${this.mark}`);
+//     // using class
 
-        }
-    }
 
-    let person1 = new Person("naveen", 21, 100);
-    console.log("person1 :", person1);
-    person1.greeting();
+//     class Person {
 
-}
+//         name;
+//         age;
+//         mark;
 
-//
+//         constructor(name, age, mark) {
+//             this.name = name;
+//             this.age = age;
+//             this.mark = mark;
+//         }
 
-console.log("\n\n\n")
+//         greeting() {
+//             console.log(`Hello ${this.name}, your age is ${this.age}, and your Mark is ${this.mark}`);
+
+//         }
+//     }
+
+//     let person1 = new Person("naveen", 21, 100);
+//     console.log("person1 :", person1);
+//     person1.greeting();
+
+// }
+
+// //
+
+// console.log("\n\n\n")
 
 
 // {
@@ -180,7 +180,19 @@ console.log("\n\n\n")
 
 console.log("\n\n\n")
 
-{
-}
+
+    let button = document.getElementById('bttn');
+    let color = ["green","blue","red","yellow","purple","black"];
+    let i = 0 ;
+    
+    button.addEventListener("click", function() {
+        document.body.style.background = color[i];
+        i = (i + 1)% color.length;
+    });
+
+
+
+   
+
 
 

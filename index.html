@@ -6,18 +6,48 @@
     <title>javascript</title>
     <link rel="stylesheet" href="javas.js">
 
-    <style>
-        table,th,td{
-            border: 2px solid black;
-            border-collapse: collapse;
-            padding: 10px;
-        }
-    </style>
+  
 </head>
 <body>
     <h1>JAVASCRIPT</h1>
-    <button id="btn">click</button>
-    <table>
+
+
+    <button id="bttn" style="background-color: aqua;">click</button>
+    <script src="javas.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    <!-- <table>
         <thead>
             <tr>
                 <th>name</th>
@@ -27,58 +57,58 @@
             </tr>
         </thead>
         <tbody id="dataContainer"></tbody>
-    </table>
+    </table> -->
 
-    <script>
+    <!-- <script>
 
-    let xhr = new XMLHttpRequest();
-    console.log("xhr :",xhr);
+    // let xhr = new XMLHttpRequest();
+    // console.log("xhr :",xhr);
 
-    xhr.open("get","https://jsonplaceholder.typicode.com/users")
-    let btn = document.getElementById("btn")
-    btn.addEventListener("click",function () {
-        xhr.send();
-    });
+    // xhr.open("get","https://jsonplaceholder.typicode.com/users")
+    // let btn = document.getElementById("btn")
+    // btn.addEventListener("click",function () {
+    //     xhr.send();
+    // });
 
-    xhr.onreadystatechange = function () {
-        console.log("readyState :" , xhr.readyState);
+    // xhr.onreadystatechange = function () {
+    //     console.log("readyState :" , xhr.readyState);
 
-        if(xhr.readyState === 4) {
-            console.log("status ; ",xhr.status);
+    //     if(xhr.readyState === 4) {
+    //         console.log("status ; ",xhr.status);
 
-            if(xhr.status === 200) { 
+    //         if(xhr.status === 200) { 
                 
-                let response = xhr.response;
-                console.log("response : ",response);
-                console.log("typeof(response) : ", typeof(response));
+    //             let response = xhr.response;
+    //             console.log("response : ",response);
+    //             console.log("typeof(response) : ", typeof(response));
 
-                let datas = JSON.parse(response);
-                console.log("datas :" , datas)
+    //             let datas = JSON.parse(response);
+    //             console.log("datas :" , datas)
 
-                let dataContainer = document.getElementById('dataContainer');
-                console.log("dataContainer :",dataContainer);
+    //             let dataContainer = document.getElementById('dataContainer');
+    //             console.log("dataContainer :",dataContainer);
 
-                let rows = '';
+    //             let rows = '';
 
-                for(let i = 0; i < datas.length; i++){
-                    rows = rows +`  
-                    <tr>
-                        <td>${datas[i].name}</td>
-                        <td>${datas[i].username}</td>
-                        <td>${datas[1].email}</td>
-                        <td>${datas[i].website}</td>
-                    </tr>
-                    `  
-                }
+    //             for(let i = 0; i < datas.length; i++){
+    //                 rows = rows +`  
+    //                 <tr>
+    //                     <td>${datas[i].name}</td>
+    //                     <td>${datas[i].username}</td>
+    //                     <td>${datas[1].email}</td>
+    //                     <td>${datas[i].website}</td>
+    //                 </tr>
+    //                 `  
+    //             }
                 
-                console.log("rows : ", rows);
-                dataContainer.innerHTML = rows;
-            }
+    //             console.log("rows : ", rows);
+    //             dataContainer.innerHTML = rows;
+    //         }
             
-        }
+    //     }
 
-    }
-    </script>
+    // } -->
+     </script>
     
 </body>
 </html>
