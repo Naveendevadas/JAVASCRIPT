@@ -182,7 +182,7 @@ console.log("\n\n\n")
 
 
     let button = document.getElementById('bttn');
-    let color = ["green","blue","red","yellow","purple","black"];
+    let color = ["green","blue","red","yellow","purple","black","white"];
     let i = 0 ;
     
     button.addEventListener("click", function() {
