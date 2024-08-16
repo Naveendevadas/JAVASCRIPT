@@ -1,6 +1,6 @@
 let xhr = new XMLHttpRequest()
 console.log("req :",xhr);
-xhr.open('get',);
+xhr.open('get',"https://fakestoreapi.com/products");
 xhr.send();
 
 xhr.onreadystatechange = function () {
@@ -19,7 +19,7 @@ xhr.onreadystatechange = function () {
         // let texterss = document.getElementsByClassName("texterss");
 
         for (let i=0; i<texterss.length && i<data.length; i++) {
-            texterss[i].innerHTML = (data[i].texterss).slice(0,20)+ "..."
+            texterss[i].innerHTML = data[i].title
         }
     }
 }
