@@ -29,18 +29,16 @@ xhr.onreadystatechange = function () {
                 box =box + 
 
                 `
+                <div id="boxes"> 
                 <div id="classs">
-                <div id="boxes">
-                 <div>${data[i].title}</div>
+                 <div>${(data[i].title).slice(0,30)+".."}</div> 
+                 </div>
                  <img src=${data[i].image}>
-                  <div>${data[i].description}</div> 
-                  <div>${data[i].price}</div>
-                </div> 
+                  <div>${(data[i].description).slice(0,30)+".."}</div>
+                  <div>$${data[i].price}</div>
                 </div>
-
                 `
             }
-
             console.log("box : ", box);
             datacontainer.innerHTML = box;
         }
