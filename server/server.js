@@ -14,12 +14,22 @@ const server = http.createServer((req,res) =>{
         res.writeHead(200,{'content-type':'text/html'})
         res.end(link.readFileSync('../client/index.html'))
     }
-    else if(parsed_url.pathname === '/json'){
+    else if(parsed_url.pathname === '/datas'){
         res.writeHead(200,{'content-type':'text/json'})
-        res.end(link.readFileSync('./data.json'))
+        res.end(link.readFileSync('../server/data.json'))
+
+    }
+    else if(parsed_url.pathname==='/script.js'){
+        res.writeHead(200,{'content-type':'text/javascript'})
+        res.end(link.readFileSync('../client/scrpt.js'))
+
     }
     
+    else if(parsed_url.pathname==='/style.css'){
+        res.writeHead(200,{'content-type':'text/css'})
+        res.end(link.readFileSync('../client/style.css'))
 
+    }
 
 
 })
